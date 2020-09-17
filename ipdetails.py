@@ -1,5 +1,6 @@
 import requests
 from requests.exceptions import HTTPError
+import time
 
 try:
 	ip1 = open("ip.txt","r")
@@ -21,6 +22,7 @@ try:
 				#print ip,':',value
         			#print key,':', value
  		i=i+1
+		time.sleep(30)
 except HTTPError as http_err:
     print('HTTP error occurred: {http_err}')
 except Exception as err:
