@@ -7,7 +7,7 @@ try:
 	ipread = ip1.readlines()
 	i = 1
 	for ip in ipread:
-		#print ip
+		#print ip 
 		ip = ip.rstrip()
 		ip = ip.lstrip()
  		url = 'http://ip-api.com/json/'+ip
@@ -21,7 +21,12 @@ try:
 				#print ip,':',value
         			#print key,':', value
  		i=i+1
-		time.sleep(50)
+		if i==45:
+			#print "I am sleeping for 60sec"
+			time.sleep(60)
+		else:
+			#print "I am sleeping for 5sec"
+			time.sleep(2)
 except HTTPError as http_err:
     print('HTTP error occurred: {http_err}')
 except Exception as err:
