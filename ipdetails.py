@@ -7,8 +7,7 @@ try:
 	ipread = ip1.readlines()
 	i = 1
 	for ip in ipread:
-		#print ip 
-       		#ip2 = '18.130.203.48'
+		#print ip
 		ip = ip.rstrip()
 		ip = ip.lstrip()
  		url = 'http://ip-api.com/json/'+ip
@@ -22,7 +21,7 @@ try:
 				#print ip,':',value
         			#print key,':', value
  		i=i+1
-		time.sleep(30)
+		time.sleep(50)
 except HTTPError as http_err:
     print('HTTP error occurred: {http_err}')
 except Exception as err:
