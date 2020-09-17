@@ -4,7 +4,7 @@ from requests.exceptions import HTTPError
 try:
 	ip1 = open("ip.txt","r")
 	ipread = ip1.readlines()
-	i = 0
+	i = 1
 	for ip in ipread:
 		#print ip 
        		#ip2 = '18.130.203.48'
@@ -16,11 +16,11 @@ try:
 		response.raise_for_status()
 		jsonResponse = response.json()
     		for key, value in jsonResponse.items():
-			print ip,',',key,',',value
+			print i,',',ip,',',key,',',value
 			#if key == "org":
 				#print ip,':',value
         			#print key,':', value
-    
+ 		i=i+1
 except HTTPError as http_err:
     print('HTTP error occurred: {http_err}')
 except Exception as err:
