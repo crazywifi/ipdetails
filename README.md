@@ -1,4 +1,4 @@
-# Ip Address Information gathering Tool
+# IP Address Information gathering Tool
 
 This tool used in Red Team Assessment to gather the IP address details in bulk.
 
